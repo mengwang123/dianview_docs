@@ -11,11 +11,15 @@
 DianView广告SDK iOS版，SDK中包含两个文件：libNDJVideoFramework.a,NDJWorkSpace.h
 
 ## 接入过程
-#### 1. 注册并获取DianView平台AppId
+#### 1. 注册并获取DianView平台AppId和PlacementId（广告位Id）
 
-> 因为当前sdk版本暂未支持自助接入，如果有接入需求或对我们sdk感兴趣，请联系<dev.support@dianview.com>
+因为当前sdk版本暂未支持自助接入，如果有接入需求或对我们sdk感兴趣，请联系<dev.support@dianview.com>
 
-** 在appid未审核通过之前，请使用我们对外Demo中的AppId：**`304ddb29fa194887`**进行测试，测试通过后再改回您的AppId**
+在AppId未审核通过之前，请在开发者后台中，将测试手机的idfa登记到测试设备列表进行测试，此时测试手机将得到固定的测试广告，其他未登记的手机得不到任何广告
+
+![img](../img/sdk_test_device.png)
+
+测试完毕后，由dianview的工作人员审核通过您的AppId，之后任何用户都可以得到正确的广告列表了
 
 #### 2. 在工程中添加DianView平台SDK
 1. 将获取到的DianView视频广告SDK IOS版压缩包解压后的头文件和.a文件加入到工程中
