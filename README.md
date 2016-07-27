@@ -15,6 +15,7 @@
 - [SDK嵌入指南](Developer/sdk.md)
 - [错误码和错误处理](Developer/exception_handle.md)
 - [常见问题](Developer/dev_faq.md)
+- [SDK和demo下载](Developer/sdk/)
 
 ## FAQ
 

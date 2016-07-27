@@ -4,10 +4,6 @@
 
 > 对iOS来说就是itunes id，比如一个应用在app store上的链接是 `https://itunes.apple.com/cn/app/you-buuber-chu-xing-shou-xuan/id368677368?mt=8`, id就是368677368
 
-#### SDK对应的xcode版本是什么？
-
-> 7.0以上都可以用
-
 #### VideoAd和Rewarded AD区别是什么？
 
 > 	可以简单理解为VideoAd=可以跳过和静音的视频，Rewarded AD=不可以跳过不可以静音的视频。
@@ -17,3 +13,25 @@
 #### 视频大小和长度？
 
 > 视频一般大小为15-30秒，大小不到4M，流媒体播放时不到2M
+
+
+## iOS
+
+#### 如何获取包名？
+
+> 1、从工程中获取![img](../img/sdk_lookbundleID.png)
+> 2、从ipa包中获取，解压缩ipa包，找到info.plist文件，其中的Bundle identifier就是包名。
+
+#### “应用市场id”是什么?
+
+> 对iOS来说就是itunes id，比如一个应用在app store上的链接是 `https://itunes.apple.com/cn/app/you-buuber-chu-xing-shou-xuan/id368677368?mt=8`, id就是368677368
+
+#### SDK支持的iOS系统版本是多少？
+
+> 7.0以上都可以用
+
+## 安卓
+
+#### 如何获取sha1值？
+
+> 待回答...
