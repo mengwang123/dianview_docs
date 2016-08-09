@@ -17,7 +17,7 @@
 - [iOS SDK嵌入技术指南](Developer/iOS/sdk.md)
 - [错误码和错误处理](Developer/iOS/exception_handle.md)
 - [iOS开发者常见问题](Developer/iOS/dev_faq.md)
-- [iOS SDK和demo下载](Developer/sdk/)
+- [iOS SDK和demo下载](Developer/iOS/sdk/)
 
 #### 安卓
 - [开发者操作入门](Developer/Android/getting_start.md)
