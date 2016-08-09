@@ -1,6 +1,5 @@
-# readme
+# 视频奖励广告文档
 
-> 本文档是dianview奖励视频广告的公开文档
 
 ## 广告主
 
@@ -11,11 +10,20 @@
 
 ## 开发者
 
-- [入门](Developer/getting_start.md)
-- [SDK嵌入指南](Developer/sdk.md)
-- [错误码和错误处理](Developer/exception_handle.md)
-- [常见问题](Developer/dev_faq.md)
-- [SDK和demo下载](Developer/sdk/)
+- [开发者常见问题](Developer/dev_faq.md)
+
+#### iOS
+- [开发者操作入门](Developer/iOS/getting_start.md)
+- [iOS SDK嵌入技术指南](Developer/iOS/sdk.md)
+- [错误码和错误处理](Developer/iOS/exception_handle.md)
+- [iOS开发者常见问题](Developer/iOS/dev_faq.md)
+- [iOS SDK和demo下载](Developer/sdk/)
+
+#### 安卓
+- [开发者操作入门](Developer/Android/getting_start.md)
+- [Android SDK嵌入技术指南](Developer/Android/sdk.md)
+- [Android开发者常见问题](Developer/Android/dev_faq.md)
+- [Android SDK和demo下载](Developer/Android/sdk/)
 
 ## FAQ
 

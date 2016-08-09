@@ -17,7 +17,7 @@
 
  在广告主后台中进行, 在“广告详情”页中，选择“点击上报”tab页，可以进行点击上报的设置，如下图
 
-![img](./img/click_report_setting.png)
+![img](img/click_report_setting.png)
 
 #### 参数列表
 
