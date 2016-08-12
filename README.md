@@ -1,5 +1,8 @@
 # 视频奖励广告文档
 
+## 关于dianview
+
+[简介](dianview.pdf)
 
 ## 广告主
 

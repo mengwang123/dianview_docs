@@ -13,7 +13,8 @@ b.如果有接入需求或对我们SDK感兴趣，请联系dev.support@dianview.
 ###2. 接入SDK
 ####2.1 使用Android Studio 导入SDK
 
-a. 将aar文件和so文件复制到您工程的libs目录中
+
+a. 将<font color=red>videolibrary-release.arr</font>文件和<font color=red>libvideolibrary.so</font>文件复制到您工程的libs目录中
 
 b.在build.gradle中compile申明（详情参考demo中build.gradle配置）
    
@@ -118,7 +119,7 @@ f.视频播放回调接口(DianViewVideoPlayListener)
 
 ####2.3 使用Eclipse 导入SDK
 
-a.将videolibrary-release.jar文件和libvideolibrary.so文件复制到您工程的libs目录中并且导入library工程（开发时需要设置library工程作为依赖）
+a.将<font color=red>videolibrary-release.jar、android-support-v4.jar</font>文件和<font color=red>libvideolibrary.so</font>文件复制到您工程的libs目录中并且导入library工程（开发时需要设置library工程作为依赖）
 
 b.组件以及权限注册同上
 
@@ -129,6 +130,11 @@ c.接口调用同上
     -dontwarn com.dianjoy.video.**
     -keep class **.R$* { *;  }
     -keep class com.dianjoy.video.**{*;} 
+
+###4.注意事项
+ 
+<font color=red>注意事项：对接完成后，请测试完整流程：初始化-->视频播放-->广告下载，以确保以上流程可以正确运行</font>
+
 
 
   
