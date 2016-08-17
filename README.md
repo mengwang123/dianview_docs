@@ -14,6 +14,7 @@
 ## 开发者
 
 - [开发者常见问题](Developer/dev_faq.md)
+- [开发者统计数据API](Developer/monetization_api.md)
 
 #### iOS
 - [开发者操作入门](Developer/iOS/getting_start.md)

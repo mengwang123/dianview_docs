@@ -13,7 +13,6 @@ b.如果有接入需求或对我们SDK感兴趣，请联系dev.support@dianview.
 ###2. 接入SDK
 ####2.1 使用Android Studio 导入SDK
 
-
 a. 将<font color=red>videolibrary-release.arr</font>文件和<font color=red>libvideolibrary.so</font>文件复制到您工程的libs目录中
 
 b.在build.gradle中compile申明（详情参考demo中build.gradle配置）
@@ -34,11 +33,12 @@ c.在AndroidManifest.xml注册相应的组件以及权限(详情请参考demo)
   
   组件注册：
 
-        <service android:name="com.dianjoy.video.DianViewService" />
+        <service android:name="com.dianjoy.video.DianViewService" android:process=":playgame" />
         
         <activity
             android:name="com.dianjoy.video.DianViewActivity"
             android:launchMode="singleTask"
+            android:screenOrientation="landscape"
             android:configChanges="keyboardHidden|orientation"/>
 
   权限注册：
