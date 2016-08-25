@@ -31,12 +31,12 @@ dianview Ads 提供了API接口便于开发者获取统计数据，结果会以j
 登陆dianview Ads后台，在账户页面可得到key。每一次请求都需要带上当前key。
 
 #### <span id="fields">fields</span>
-需要获取的数据，目前能使用的参数值有：`revenue, started, finished, show`，不在范围内的取值都会被忽略。  
+需要获取的数据，目前能使用的参数值有：`revenue, started, finished, showed`，不在范围内的取值都会被忽略。  
 
 	revenue 	收入
 	started 	视频开始播放的次数
 	finished 	视频播放完成的次数
-	show 		广告详情页展示的次数
+	showed 		广告详情页展示的次数
 
 #### <span id="splitBy">splitBy</span>
 数据依据那一列来分组，目前能使用的参数值：`source`，不在范围内的取值都会被忽略。默认会选取source。  
@@ -59,7 +59,7 @@ dianview Ads 提供了API接口便于开发者获取统计数据，结果会以j
 
 	负数，表明是以当前时间为七点，回溯到固定天数前。-7就是表明一周前。  
 	datetime，需要使用固定的格式iso8601发送 yyyy-mm-ddThh:ii:ss+timezone 比如: 2016-07-10T19:00:00+08:00。
-**注意，datetime格式中有+，需要编码为%2b，否则会出错。所以需要datetime这个数值需要做url encode**
+**注意，datetime格式中有+，需要编码为%2b，否则会出错。所以datetime这个数值需要做url encode**
 
 #### <span id="sourceIds">sourceIds</span>
 请求数据指定需要的应用，如果指定并且数值正确那么，只会返回当前sourceIds指定应用的数据。如果要查询多个使用逗号隔开。
