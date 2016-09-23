@@ -13,19 +13,12 @@ b.如果有接入需求或对我们SDK感兴趣，请联系dev.support@dianview.
 ###2. 接入SDK
 ####2.1 使用Android Studio 导入SDK
 
-a. 将<font color=red>videolibrary-release.arr</font>文件和<font color=red>libvideolibrary.so</font>文件复制到您工程的libs目录中
+a. 将<font color=red>videolibrary-release.jar</font>文件复制到您工程的libs目录中
 
 b.在build.gradle中compile申明（详情参考demo中build.gradle配置）
    
-    repositories {
-      flatDir {
-         dirs 'libs'
-       }
-     }
-
-
     dependencies {
-      compile(name: 'videolibrary-release', ext: 'aar')
+      compile files('libs/videolibrary-release.jar')
       compile 'com.android.support:support-v4:24.0.0'
     }
 
@@ -39,7 +32,7 @@ c.在AndroidManifest.xml注册相应的组件以及权限(详情请参考demo)
             android:name="com.dianjoy.video.DianViewActivity"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"/>
 
   权限注册：
 
@@ -84,13 +77,35 @@ e.播放视频（详情请参考demo）
      * 视频播放
      * @param mContext
      * @param placement_id   广告位Id
-     * @param type           横屏或者竖屏播放   ScreenOrientationTpye.PORTRAIT(竖屏播放),ScreenOrientationTpye.LANDSCAPE（横屏播放）,ScreenOrientationTpye.AUTO(自适应)
+     * @param type           横屏或者竖屏播放   ScreenOrientationTpye.PORTRAIT(竖屏播放),ScreenOrientationTpye.LANDSCAPE（横屏播  放）,ScreenOrientationTpye.AUTO(自适应)
      * @param playListener   视频播放回调
      */
     public static void play(Context mContext, String placement_id,ScreenOrientationTpye type,DianViewVideoPlayListener playListener)
 
+f.查看是否有已缓冲好的视频可以播放
 
-f.视频播放回调接口(DianViewVideoPlayListener)
+     /**
+     * 是否有已经缓冲好的视频可以播放
+     * @param mContext
+     * @param placement_id  广告位id
+     * @return
+     */
+    public static boolean canShowBuffer(Context mContext, String placement_id)
+
+
+g.播放已缓冲好的视频
+
+    /**
+     * 播放已经缓冲好的视频
+     * @param mContext
+     * @param placement_id
+     * @param type
+     * @param playListener
+     */
+    public static void playBuffer(Context mContext, String placement_id,ScreenOrientationTpye type,DianViewVideoPlayListener playListener)
+
+
+h.视频播放回调接口(DianViewVideoPlayListener)
     
     /**
      * 视频播放成功
@@ -119,7 +134,7 @@ f.视频播放回调接口(DianViewVideoPlayListener)
 
 ####2.3 使用Eclipse 导入SDK
 
-a.将<font color=red>videolibrary-release.jar、android-support-v4.jar</font>文件和<font color=red>libvideolibrary.so</font>文件复制到您工程的libs目录中并且导入library工程（开发时需要设置library工程作为依赖）
+a.将<font color=red>videolibrary-release.jar、android-support-v4.jar</font>文件复制到您工程的libs目录中
 
 b.组件以及权限注册同上
 
