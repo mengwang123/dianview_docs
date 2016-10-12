@@ -11,7 +11,7 @@ dianview Ads 提供了API接口便于开发者获取统计数据，结果会以j
 
 ## 请求格式
 
-<span style="color:red">`http://www.dianview.com/stats/monetization-api?apikey=<apikey>&fields=<fields>[&splitBy=<splitbyfields>][&scale=<scale>][&start=<startDate>][&end=<endDate>][&sourceIds=<sourceIds>]`</span>
+<span style="color:red">`http://example.com/stats/monetization-api?apikey=<apikey>&fields=<fields>[&splitBy=<splitbyfields>][&scale=<scale>][&start=<startDate>][&end=<endDate>][&sourceIds=<sourceIds>]`</span>
 
 ### 参数列表
 
@@ -31,12 +31,13 @@ dianview Ads 提供了API接口便于开发者获取统计数据，结果会以j
 登陆dianview Ads后台，在账户页面可得到key。每一次请求都需要带上当前key。
 
 #### <span id="fields">fields</span>
-需要获取的数据，目前能使用的参数值有：`revenue, started, finished, showed`，不在范围内的取值都会被忽略。  
+需要获取的数据，目前能使用的参数值有：`requested, started, finished, showed, clicked`，不在范围内的取值都会被忽略。  
 
-	revenue 	收入
+	requested	广告请求的次数
 	started 	视频开始播放的次数
 	finished 	视频播放完成的次数
 	showed 		广告详情页展示的次数
+	clicked		广告点击的次数
 
 #### <span id="splitBy">splitBy</span>
 数据依据那一列来分组，目前能使用的参数值：`source`，不在范围内的取值都会被忽略。默认会选取source。  
