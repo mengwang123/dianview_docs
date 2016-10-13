@@ -11,7 +11,7 @@ dianview Ads 提供了API接口便于开发者获取统计数据，结果会以j
 
 ## 请求格式
 
-<span style="color:red">`http://example.com/stats/monetization-api?apikey=<apikey>&fields=<fields>[&splitBy=<splitbyfields>][&scale=<scale>][&start=<startDate>][&end=<endDate>][&sourceIds=<sourceIds>]`</span>
+<span style="color:red">`http://www.dianview.com/stats/monetization-api?apikey=<apikey>&fields=<fields>[&splitBy=<splitbyfields>][&scale=<scale>][&start=<startDate>][&end=<endDate>][&sourceIds=<sourceIds>]`</span>
 
 ### 参数列表
 
