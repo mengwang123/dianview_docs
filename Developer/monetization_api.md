@@ -31,8 +31,9 @@ dianview Ads 提供了API接口便于开发者获取统计数据，结果会以j
 登陆dianview Ads后台，在账户页面可得到key。每一次请求都需要带上当前key。
 
 #### <span id="fields">fields</span>
-需要获取的数据，目前能使用的参数值有：`requested, started, finished, showed, clicked`，不在范围内的取值都会被忽略。  
+需要获取的数据，目前能使用的参数值有：`revenue, requested, started, finished, showed, clicked`，不在范围内的取值都会被忽略。  
 
+	revenue		应用收入数据
 	requested	广告请求的次数
 	started 	视频开始播放的次数
 	finished 	视频播放完成的次数
