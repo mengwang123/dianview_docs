@@ -8,6 +8,7 @@
 
 - [入门](Advertiser/getting_start.md)
 - [广告投放计划的设计和规则](Advertiser/campaign_design.md)
+-［广告主统计数据API](Developer/api_for_developer.md)
 - [点击汇报和安装溯源](Advertiser/click_install_tracking.md)
 - [常见问题](Advertiser/adv_faq.md)
 
