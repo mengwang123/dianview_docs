@@ -4,9 +4,11 @@
 ##概述
 ###开发者依据文档提供的参数，构造请求链接，获取相应的数据。
 ##请求格式
+
 <b><font color="red">www.dianview.com/stats/transfer-api/index?ad_category=video&start_time=2016-12-01&end_time=2016-12-25&group_by_date=1&apikey=*******</font></b>
 
 ##参数列表
+
 <table style="font-size:20px">
 	<tr style="background-color:LightSteelBlue;">
 		<td>参数名称</td>
@@ -26,7 +28,6 @@
 		<td>string</td>
 		<td>用户惟一key</td>
 	</tr>
-
 	<tr>
 		<td>start_time</td>
 		<td>否</td>
@@ -192,6 +193,7 @@ GET   www.dianview.com/stats/transfer-api/index?ad_category=video&apikey=*******
 		<td>是</td>
 	</tr>			
 </table>
+
 ###提示
 用户唯一key可以找相关人员获取。
 
