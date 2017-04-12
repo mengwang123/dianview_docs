@@ -1,19 +1,24 @@
 # APi for Developer
 
-### dianview 视频广告提供APi接口便开发者获取数据，结果会返回对应数据的列表。
-### 版本2.0
-## 概述
-### 开发者依据文档提供的参数，构造请求链接，获取相应的数据。
-## 请求格式
-<b><font color="red">www.dianview.com/stats/transfer-api/index?start_time=2016-12-01&end_time=2016-12-25&group_by_date=1&apikey=*******</font></b>
+###dianview 视频广告提供APi接口便开发者获取数据，结果会返回对应数据的列表。
+##概述
+###开发者依据文档提供的参数，构造请求链接，获取相应的数据。
+##请求格式
+<b><font color="red">www.dianview.com/stats/transfer-api/index?ad_category=video&start_time=2016-12-01&end_time=2016-12-25&group_by_date=1&apikey=*******</font></b>
 
-## 参数列表
+##参数列表
 <table style="font-size:20px">
 	<tr style="background-color:LightSteelBlue;">
 		<td>参数名称</td>
 		<td>是否必须</td>
 		<td>类型</td>
 		<td>备注说明</td>
+	</tr>
+	<tr>
+		<td>ad_category</td>
+		<td>是</td>
+		<td>string</td>
+		<td>广告类别,值为video(视频)或者interstitial(插屏)[注:无此参数默认为video]</td>
 	</tr>
 	<tr>
 		<td>apikey</td>
@@ -42,151 +47,151 @@
 	</tr>	
 </table>
 
-## 验证
-要想使用当前接口，需要带上一个API KEY。这个key是在用户注册的过程就给予的，一个账户只会有一个key。
+##数据返回
+###数据格式
+####数据返回格式:json
 
-## 数据返回
-### 数据格式
-#### 数据返回格式:array
-
-## 返回数据内容
-### 示例
+##返回数据内容
+###示例
 <p>
-#### 示例1
-<b>用户唯一key为XXXXXXX,查找其2016-12-01日到2016-12-25日的详情,需要按天分</b>
+####示例1
+<b>用户唯一key为XXXXXXX,广告类别为video,查找其2016-12-01日到2016-12-25日的详情,需要按天分</b>
 <pre>
-GET   www.dianview.com/stats/transfer-api/index?start_time=2016-12-01&end_time=2016-12-25&group_by_date=1&apikey=********
+GET   www.dianview.com/stats/transfer-api/index?start_time=2016-12-01&end_time=2016-12-25&group_by_date=1&ad_category=video&apikey=********
 </pre>
-<b>返回结果</b>
+####示例2
+<b>用户唯一key为XXXXXXX,广告类别为interstitial,查找其2016-12-01日到2016-12-25日的总数据</b>
 <pre>
-Array
-(
-    [0] => Array
-        (
-            [广告点击次数] => 5
-            [广告请求数] => 6358
-            [应用id] => 5f31791aa170cd37
-            [视频开始播放的次数] => 45
-            [视频播放完成的次数] => 33
-            [广告详情页展示次数] => 47
-            [应用收入] => 1336
-            [日期] => 2016-12-22
-        )
-    [1] => Array
-        (
-            [广告点击次数] => 0
-            [广告请求数] => 6287
-            [应用id] => 5f31791aa170cd37
-            [视频开始播放的次数] => 1
-            [视频播放完成的次数] => 1
-            [广告详情页展示次数] => 1
-            [应用收入] => 0
-            [日期] => 2016-12-20
-        )
-    [2] => Array
-        (
-            [广告点击次数] => 164
-            [广告请求数] => 168986
-            [应用id] => ffe5e391e5206b12
-            [视频开始播放的次数] => 1243
-            [视频播放完成的次数] => 1053
-            [广告详情页展示次数] => 1228
-            [应用收入] => 0
-            [日期] => 2016-12-20
-        )
-)
+GET   www.dianview.com/stats/transfer-api/index?start_time=2016-12-01&end_time=2016-12-25&group_by_date=0&ad_category=interstitial&apikey=********
 </pre>
-#### 示例2
-<b>用户唯一key为XXXXXXX,查找其2016-12-01日到2016-12-25日的总数据</b>
+####示例3
+<b>用户唯一key为XXXXXXX,广告类别为video,查其历史总数据</b>
 <pre>
-GET   www.dianview.com/stats/transfer-api/index?start_time=2016-12-01&end_time=2016-12-25&group_by_date=0&apikey=********
-</pre>
-<b>返回结果</b>
-
-<pre>
-Array
-(
-    [0] => Array
-        (
-            [广告点击次数] => 54
-            [广告请求数] => 113169
-            [应用id] => 5f31791aa170cd37
-            [视频开始播放的次数] => 349
-            [视频播放完成的次数] => 251
-            [广告详情页展示次数] => 345
-            [应用收入] => 1336
-        )
-    [1] => Array
-        (
-            [广告点击次数] => 0
-            [广告请求数] => 128
-            [应用id] => 53ac067581c84eac
-            [视频开始播放的次数] => 0
-            [视频播放完成的次数] => 0
-            [广告详情页展示次数] => 0
-            [应用收入] => 0
-        )
-    [2] => Array
-        (
-            [广告点击次数] => 2346
-            [广告请求数] => 1952160
-            [应用id] => ffe5e391e5206b12
-            [视频开始播放的次数] => 16985
-            [视频播放完成的次数] => 14238
-            [广告详情页展示次数] => 16019
-            [应用收入] => 0
-        )
-)
-
-</pre>
-#### 示例3
-<b>用户唯一key为XXXXXXX,查其历史总数据</b>
-<pre>
-GET   www.dianview.com/stats/transfer-api/index?apikey=********
-</pre>
-<b>返回结果</b>
-
-<pre>
-Array
-(
-    [0] => Array
-        (
-            [广告点击次数] => 54
-            [广告请求数] => 113169
-            [应用id] => 5f31791aa170cd37
-            [视频开始播放的次数] => 349
-            [视频播放完成的次数] => 251
-            [广告详情页展示次数] => 345
-            [应用收入] => 1336
-        )
-    [1] => Array
-        (
-            [广告点击次数] => 0
-            [广告请求数] => 128
-            [应用id] => 53ac067581c84eac
-            [视频开始播放的次数] => 0
-            [视频播放完成的次数] => 0
-            [广告详情页展示次数] => 0
-            [应用收入] => 0
-        )
-    [2] => Array
-        (
-            [广告点击次数] => 2346
-            [广告请求数] => 1952160
-            [应用id] => ffe5e391e5206b12
-            [视频开始播放的次数] => 16985
-            [视频播放完成的次数] => 14238
-            [广告详情页展示次数] => 16019
-            [应用收入] => 0
-        )
-)
+GET   www.dianview.com/stats/transfer-api/index?ad_category=video&apikey=********
 </pre>
 
-### 错误格式
-| 错误码  | 错误信息 | 错误说明 |
-|--------|----------|--------|
-| 400 | Bad Request | 请求参数有错误 |
-| 401 | Unauthorized  | 用户验证失败 |
-### 请求限制
-服务端对一次请求的最长处理时间是60s，如果超过这个时间，请求没有处理完成，那么终止处理，并返回错误。
+##返回参数列表
+###视频参数列表
+<table style="font-size:15px">
+	<tr style="background-color:LightSteelBlue">
+		<td>列名</td>
+		<td>类型</td>
+		<td>说明</td>
+		<td>是否可以为空</td>
+	</tr>
+	<tr>
+		<td>ad_click</td>
+		<td>int</td>
+		<td>点击数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>req_num</td>
+		<td>int</td>
+		<td>返回数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>app_id</td>
+		<td>string</td>
+		<td>应用id</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>earning</td>
+		<td>string</td>
+		<td>收入</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>video_start</td>
+		<td>int</td>
+		<td>播放开始数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>video_start</td>
+		<td>int</td>
+		<td>播放完成数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>ad_show</td>
+		<td>int</td>
+		<td>广告展示数</td>
+		<td>否</td>
+	</tr>			
+	<tr>
+		<td>day</td>
+		<td>string</td>
+		<td>日期</td>
+		<td>是</td>
+	</tr>			
+</table>
+
+###插屏返回参数列表
+<table style="font-size:15px">
+	<tr style="background-color:LightSteelBlue">
+		<td>列名</td>
+		<td>类型</td>
+		<td>说明</td>
+		<td>是否可以为空</td>
+	</tr>
+	<tr>
+		<td>ad_notify</td>
+		<td>int</td>
+		<td>回调数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>req_num</td>
+		<td>int</td>
+		<td>返回数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>app_id</td>
+		<td>string</td>
+		<td>应用id</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>earning</td>
+		<td>string</td>
+		<td>收入</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>ad_click</td>
+		<td>int</td>
+		<td>点击数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>ad_install</td>
+		<td>int</td>
+		<td>安装数</td>
+		<td>否</td>
+	</tr>
+		<tr>
+		<td>ad_imp</td>
+		<td>int</td>
+		<td>展示数</td>
+		<td>否</td>
+	</tr>
+	<tr>
+		<td>down_ok</td>
+		<td>int</td>
+		<td>下载数</td>
+		<td>否</td>
+	</tr>			
+	<tr>
+		<td>day</td>
+		<td>string</td>
+		<td>日期</td>
+		<td>是</td>
+	</tr>			
+</table>
+###提示
+用户唯一key可以找相关人员获取。
 
